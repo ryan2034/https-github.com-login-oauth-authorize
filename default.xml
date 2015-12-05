@@ -4,9 +4,9 @@
            fetch="https://chromium.googlesource.com"
            review="https://chromium-review.googlesource.com" />
 
-  <remote  name="cros-internal"
-           fetch="https://chrome-internal.googlesource.com"
-           review="https://chrome-internal-review.googlesource.com" />
+  <remote  name="aosp"
+           fetch="https://android.googlesource.com"
+           review="https://android-review.googlesource.com" />
 
   <default revision="refs/heads/master"
            remote="cros" sync-j="8" />
@@ -16,8 +16,8 @@ Your sources have been sync'd successfully.
   </notice>
 
   <project path="chromite" name="chromiumos/chromite" />
-  <project path="chromite/config" name="brillo/bbuildbot_config"
-           remote="cros-internal" />
+  <project path="chromite/config" name="platform/bbuildbot_config"
+           remote="aosp" />
 
   <!-- To get requirements for cros lint -->
   <project path="chromium/tools/depot_tools"
