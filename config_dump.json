@@ -1,0 +1,16 @@
+{
+    "_default": {
+        "boards": [],
+        "manifest_repo_url": "https://chromium.googlesource.com/chromiumos/chromite/abuildbot_config"
+    },
+    "_site_params": {
+        "ARCHIVE_URL": "gs://abuildbot-build-archive/bbuildbot"
+    },
+    "_templates": {},
+
+    "bbuildbot": {
+        "builder_class_name": "config.builders.brillo_builders.BrilloBuilder",
+        "brillo_manifest_url": "https://android.googlesource.com/brillo/manifest",
+        "brillo_manifest_branch": "master"
+    }
+}

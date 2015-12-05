@@ -1,0 +1,11 @@
+# Generated files
+*.pyc
+*~
+*.swp
+.project
+.pydevproject
+
+# source cross-reference files.
+tags
+.ctags
+cscope.out
