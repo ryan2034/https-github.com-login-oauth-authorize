@@ -11,6 +11,8 @@
     "bbuildbot": {
         "builder_class_name": "config.builders.brillo_builders.BrilloBuilder",
         "brillo_manifest_url": "https://android.googlesource.com/brillo/manifest",
-        "brillo_manifest_branch": "master"
+        "brillo_manifest_branch": "master",
+        "lunch_target": "brilloemulator_arm-eng",
+        "emulator": "brilloemulator-arm"
     }
 }
