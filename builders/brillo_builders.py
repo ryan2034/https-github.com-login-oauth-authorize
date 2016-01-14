@@ -56,7 +56,7 @@ class BrilloStageBase(generic_stages.BuilderStage):
     cmd_list.append('OUT_DIR=%s' % self.BuildOutput())
     cmd_list.append(' '.join(cmd))
 
-    return ' && '.join(cmd_list)
+    return ' > /dev/null && '.join(cmd_list)
 
   def RunLunchCommand(self, cmd, **kwargs):
     """RunCommand with lunch setup."""
