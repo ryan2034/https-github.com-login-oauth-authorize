@@ -108,11 +108,10 @@ class BrilloVmTestStage(BrilloStageBase):
   def RunEmulator(self):
     """Run an emulator process in the background, kill it on exit."""
     with tempfile.NamedTemporaryFile(prefix='emulator') as logfile:
-      cmd = self.FindShellCmd([self._run.config.emulator])
+      cmd = ['/bin/bash', '-c', self.FindShellCmd([self._run.config.emulator])]
       logging.info('Starting emulator: %s', cmd)
       p = subprocess.Popen(
-          args=(cmd,),
-          shell=True,
+          args=cmd,
           close_fds=True,
           stdout=logfile,
           stderr=subprocess.STDOUT,
