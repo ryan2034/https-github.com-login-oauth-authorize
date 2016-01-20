@@ -1,7 +1,14 @@
 {
     "_default": {
         "boards": [],
-        "manifest_repo_url": "https://android.googlesource.com/platform/bbuildbot_config/"
+        "manifest_repo_url": "https://android.googlesource.com/platform/bbuildbot_config/",
+        "builder_class_name": "config.builders.brillo_builders.BrilloBuilder",
+        "brillo_manifest_url": "https://android.googlesource.com/brillo/manifest",
+        "brillo_manifest_branch": "master",
+        "health_threshold": 1,
+        "health_alert_recipients": [
+            "bruteus+bbotfailure@google.com"
+        ]
     },
     "_site_params": {
         "ARCHIVE_URL": "gs://abuildbot-build-archive/bbuildbot"
@@ -9,9 +16,6 @@
     "_templates": {},
 
     "bbuildbot": {
-        "builder_class_name": "config.builders.brillo_builders.BrilloBuilder",
-        "brillo_manifest_url": "https://android.googlesource.com/brillo/manifest",
-        "brillo_manifest_branch": "master",
         "lunch_target": "brilloemulator_arm-eng",
         "emulator": "brilloemulator-arm"
     }
