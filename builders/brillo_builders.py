@@ -198,7 +198,7 @@ class BrilloVmTestStage(BrilloStageBase):
       logging.info('Running tests against %s', serial)
       self.RunLunchCommand(
           ['external/autotest/site_utils/test_droid.py',
-           '--debug', serial, 'brillo_WhitelistedGtests'],
+           '--debug', serial, 'suite:brillo-smoke'],
           cwd=self.BrilloRoot())
 
 
