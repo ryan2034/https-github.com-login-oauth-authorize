@@ -11,7 +11,8 @@
         ]
     },
     "_site_params": {
-        "ARCHIVE_URL": "gs://abuildbot-build-archive/bbuildbot"
+        "ARCHIVE_URL": "gs://abuildbot-build-archive/bbuildbot",
+        "MANIFEST_VERSIONS_GS_URL": "gs://abuildbot-build-archive/bbuildbot"
     },
     "_templates": {},
 
