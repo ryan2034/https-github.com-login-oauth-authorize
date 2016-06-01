@@ -92,6 +92,8 @@ class BrilloSyncStage(BrilloStageBase):
     brillo_repo.Initialize()
     brillo_repo.Sync()
 
+    logging.info('Syncd manifest:\n%s', brillo_repo.ExportManifest())
+
 
 class BrilloBuildStage(BrilloStageBase):
   """Compile the Brillo checkout."""
@@ -203,7 +205,7 @@ class BrilloVmTestStage(BrilloStageBase):
 
 
 class BrilloBuilder(generic_builders.Builder):
-  """Builder that performs sync, then exits."""
+  """Builder for TOT brillo plus VM Tests."""
 
   def GetSyncInstance(self):
     """Returns an instance of a SyncStage that should be run."""
