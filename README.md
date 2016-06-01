@@ -14,3 +14,13 @@ bin/cbuildbot --buildroot ~/tmp/test_buildroot \
   https://android.googlesource.com/platform/bbuildbot_config \
   bbuildbot
 ```
+
+To perform a test build with local changes:
+
+```sh
+bin/cbuildbot --nobootstrap --noreexec \
+  --buildroot ~/tmp/test_buildroot \
+  --buildbot --debug --config_repo  \
+  https://android.googlesource.com/platform/bbuildbot_config \
+  bbuildbot
+```
